@@ -93,7 +93,7 @@ export const projects: Project[] = [
     id: "techtrials",
     title: "TechTrials Health Care App",
     description:
-      "Full-stack healthcare platform featuring AI voice assistance and OCR-based diagnosis, with integrated payment processing and patient management.",
+      "Full-stack healthcare platform featuring AI voice assistance and diagnosis, with payment processing and patient management for Brazil",
     technologies: [
       "React",
       "FastAPI",
@@ -101,7 +101,7 @@ export const projects: Project[] = [
       "OpenAI",
       "Stripe",
     ],
-    highlight: "Reduced administrative workload by 60%",
+    highlight: "Reduced Doctor's time by 30-50%, with voice assistance, diagnosis, patient speech saved in SOAP notes, proper AI-powered Health bot for Brazil ",
     featured: true,
   },
   {
