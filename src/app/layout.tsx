@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "M. Faizan Munir | Full-Stack Software Engineer (AI, Python, Web Dev)",
+  title: "M. Faizan Munir | Full-Stack Software Engineer (AI & Intelligent Systems)",
   description:
     "Portfolio of M. Faizan Munir — Full-Stack Software Engineer specializing in AI-driven and LLM-powered applications. Building intelligent systems with React, FastAPI, RAG pipelines, and vector search.",
   keywords: [
@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     "LangChain",
   ],
   authors: [{ name: "M. Faizan Munir" }],
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     title: "M. Faizan Munir | AI & Full-Stack Engineer",
     description:
