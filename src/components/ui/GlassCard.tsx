@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface GlassCardProps {
@@ -23,25 +20,10 @@ export function GlassCard({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      whileHover={
-        hover
-          ? {
-              y: -4,
-              rotateX: 2,
-              rotateY: -2,
-              transition: { duration: 0.3 },
-            }
-          : undefined
-      }
-      style={{ transformPerspective: 800 }}
-      className={`glass rounded-2xl p-6 transition-all duration-300 ${hover ? glowStyles[glowOnHover] : ""} ${className}`}
+    <div
+      className={`glass rounded-2xl p-6 transition-colors duration-200 ${hover ? glowStyles[glowOnHover] : ""} ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

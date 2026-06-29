@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/SocialIcons";
 import { personalInfo, socialLinks } from "@/data/portfolio";
@@ -23,29 +20,37 @@ export function Footer() {
               <span className="gradient-text">FM</span>
               <span className="text-white">.</span>
             </p>
-            <p className="mt-1 text-sm text-muted">
-              {personalInfo.title}
-            </p>
+            <p className="mt-1 text-sm text-muted">{personalInfo.title}</p>
           </div>
 
           <div className="flex items-center gap-4">
             {socialLinks.map((link) => {
               const Icon = socialIconMap[link.icon];
               return (
-                <motion.a
+                <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ y: -2, scale: 1.1 }}
                   className="flex h-9 w-9 items-center justify-center rounded-lg glass text-muted transition-colors hover:text-cyber-cyan"
                   aria-label={link.label}
                 >
                   <Icon className="h-4 w-4" />
-                </motion.a>
+                </a>
               );
             })}
           </div>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-glass-border pt-8 md:flex-row">
+          <p className="text-xs text-muted">
+            &copy; {currentYear} {personalInfo.name}. All rights reserved.
+          </p>
+          <p className="flex items-center gap-1 text-xs text-muted">
+            Built with
+            <Heart className="h-3 w-3 text-electric-violet" />
+            using Next.js
+          </p>
         </div>
       </div>
     </footer>

@@ -185,7 +185,6 @@ export const skillCategories: SkillCategory[] = [
 
 export const stats = [
   { label: "AI Apps Delivered", value: "4+" },
-  { label: "RAG Speed Boost", value: "40%" },
   { label: "Modules Built", value: "6+" },
-  { label: "Years Experience", value: "2+" },
+  { label: "Years Experience", value: "1.5+" },
 ];

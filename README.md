@@ -1,6 +1,6 @@
 # M. Faizan Munir — Portfolio
 
-A personal portfolio website for a Full-Stack Software Engineer specializing in AI-driven and LLM-powered applications. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+A premium, dark-themed portfolio website for a Full-Stack Software Engineer specializing in AI-driven and LLM-powered applications. Built with Next.js, TypeScript, and Tailwind CSS.
 
 **Live demo:** Run locally with `npm run dev` → [http://localhost:3000](http://localhost:3000)
 
@@ -8,13 +8,12 @@ A personal portfolio website for a Full-Stack Software Engineer specializing in 
 
 ## Features
 
-- **Cinematic hero** — Split-screen layout with animated gradient profile frame, staggered text reveals, and magnetic CTA buttons
+- **Cinematic hero** — Split-screen layout with gradient profile frame and clear CTAs
 - **Glassmorphism UI** — Frosted glass cards, subtle gradients, and neon accent colors (cyber cyan / electric violet)
-- **Framer Motion animations** — Scroll-triggered fade-ins, timeline node lighting, card perspective hovers, and smooth micro-interactions
-- **Experience timeline** — Vertical timeline with scroll-progress indicator and pulsing current-role node
-- **Tech stack grid** — Interactive skill categories with hover glow effects
+- **Experience timeline** — Clean vertical timeline with alternating layout
+- **Tech stack grid** — Skill categories with hover glow effects
 - **Project showcase** — Featured AI/LLM projects with impact metrics and technology badges
-- **Contact form** — Animated form with API route (`/api/contact`) and mailto fallback
+- **Contact form** — Form with API route (`/api/contact`) and mailto fallback
 - **Fully typed** — TypeScript interfaces for all portfolio data structures
 - **SEO ready** — Semantic HTML, Open Graph metadata, and optimized fonts via `next/font`
 
@@ -27,7 +26,6 @@ A personal portfolio website for a Full-Stack Software Engineer specializing in 
 | Framework | Next.js 15+ (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
-| Animation | Framer Motion |
 | Icons | Lucide React + custom SVGs |
 | Fonts | Inter, JetBrains Mono |
 
@@ -73,17 +71,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 src/
 ├── app/
 │   ├── api/contact/route.ts   # Contact form API endpoint
-│   ├── globals.css            # Theme tokens, glass utilities, animations
+│   ├── globals.css            # Theme tokens and glass utilities
 │   ├── icon.svg               # Browser favicon (FM monogram)
 │   ├── apple-icon.svg         # Apple touch icon
 │   ├── layout.tsx             # Root layout, fonts, metadata
 │   └── page.tsx               # Home page composition
 ├── components/
 │   ├── ui/                    # Reusable atomic components
-│   │   ├── AnimatedText.tsx
 │   │   ├── Badge.tsx
 │   │   ├── Button.tsx
-│   │   ├── FadeInUp.tsx
 │   │   ├── GlassCard.tsx
 │   │   ├── MagneticButton.tsx
 │   │   ├── ProjectCard.tsx
