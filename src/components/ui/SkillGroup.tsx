@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Brain, Code2, Database, Server } from "lucide-react";
 import type { SkillCategory } from "@/types";
 import { Badge } from "./Badge";
@@ -38,18 +35,10 @@ export function SkillGroup({ category, index }: SkillGroupProps) {
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {category.skills.map((skill, skillIndex) => (
-          <motion.div
-            key={skill}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: skillIndex * 0.05 }}
-          >
-            <Badge variant={glowColor === "cyan" ? "accent" : "violet"}>
-              {skill}
-            </Badge>
-          </motion.div>
+        {category.skills.map((skill) => (
+          <Badge key={skill} variant={glowColor === "cyan" ? "accent" : "violet"}>
+            {skill}
+          </Badge>
         ))}
       </div>
     </GlassCard>

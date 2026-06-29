@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import type { Project } from "@/types";
 import { Badge } from "./Badge";
@@ -21,12 +18,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyber-cyan/20 to-electric-violet/20">
           <Sparkles className="h-5 w-5 text-cyber-cyan" />
         </div>
-        <motion.div
-          whileHover={{ rotate: 45, scale: 1.1 }}
-          className="text-muted transition-colors group-hover:text-cyber-cyan"
-        >
+        <div className="text-muted transition-colors group-hover:text-cyber-cyan">
           <ArrowUpRight className="h-5 w-5" />
-        </motion.div>
+        </div>
       </div>
 
       <article className="flex flex-1 flex-col gap-3">

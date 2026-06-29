@@ -1,13 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 import type { ContactFormData } from "@/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { FadeInUp } from "@/components/ui/FadeInUp";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -47,7 +45,6 @@ export function Contact() {
       setStatus("success");
       setFormData(initialFormData);
     } catch {
-      // Fallback to mailto if API is unavailable
       const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
       )}`;
@@ -58,7 +55,7 @@ export function Contact() {
   };
 
   const inputClasses =
-    "w-full rounded-xl border border-glass-border bg-white/5 px-4 py-3 text-sm text-white placeholder:text-muted/50 transition-all duration-300 focus:border-cyber-cyan/50 focus:outline-none focus:ring-1 focus:ring-cyber-cyan/30";
+    "w-full rounded-xl border border-glass-border bg-white/5 px-4 py-3 text-sm text-white placeholder:text-muted/50 transition-colors duration-200 focus:border-cyber-cyan/50 focus:outline-none focus:ring-1 focus:ring-cyber-cyan/30";
 
   return (
     <section id="contact" className="relative py-24 md:py-32">
@@ -71,7 +68,7 @@ export function Contact() {
         />
 
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-12 lg:grid-cols-5">
-          <FadeInUp className="flex flex-col justify-center gap-6 lg:col-span-2">
+          <div className="flex flex-col justify-center gap-6 lg:col-span-2">
             <div className="glass rounded-2xl p-6">
               <h3 className="mb-4 text-lg font-semibold text-white">
                 Get in touch
@@ -99,24 +96,18 @@ export function Contact() {
                     Status
                   </p>
                   <p className="mt-1 flex items-center gap-2 text-white">
-                    <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-                    </span>
+                    <span className="inline-flex h-2 w-2 rounded-full bg-green-500" />
                     Open to opportunities
                   </p>
                 </div>
               </div>
             </div>
-          </FadeInUp>
+          </div>
 
-          <FadeInUp delay={0.2} className="lg:col-span-3">
-            <motion.form
+          <div className="lg:col-span-3">
+            <form
               onSubmit={handleSubmit}
               className="glass rounded-2xl p-6 md:p-8"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
             >
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
@@ -186,7 +177,6 @@ export function Contact() {
               <div className="mt-6 flex items-center gap-4">
                 <MagneticButton
                   type="submit"
-                  strength={0.2}
                   disabled={status === "submitting"}
                   className="bg-gradient-to-r from-cyber-cyan-dim to-electric-violet-dim text-white"
                 >
@@ -203,29 +193,21 @@ export function Contact() {
                 </MagneticButton>
 
                 {status === "success" && (
-                  <motion.span
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center gap-1 text-sm text-green-400"
-                  >
+                  <span className="flex items-center gap-1 text-sm text-green-400">
                     <CheckCircle className="h-4 w-4" />
                     Message sent!
-                  </motion.span>
+                  </span>
                 )}
 
                 {status === "error" && (
-                  <motion.span
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center gap-1 text-sm text-red-400"
-                  >
+                  <span className="flex items-center gap-1 text-sm text-red-400">
                     <AlertCircle className="h-4 w-4" />
                     Something went wrong
-                  </motion.span>
+                  </span>
                 )}
               </div>
-            </motion.form>
-          </FadeInUp>
+            </form>
+          </div>
         </div>
       </div>
     </section>
