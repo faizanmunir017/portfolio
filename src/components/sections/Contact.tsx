@@ -67,7 +67,7 @@ export function Contact() {
           align="center"
         />
 
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-12 lg:grid-cols-5">
+        <div className="mx-auto flex max-w-4xl justify-center">
           <div className="flex flex-col justify-center gap-6 lg:col-span-2">
             <div className="glass rounded-2xl p-6">
               <h3 className="mb-4 text-lg font-semibold text-white">
@@ -104,7 +104,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          {/* <div className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
               className="glass rounded-2xl p-6 md:p-8"
@@ -174,8 +174,8 @@ export function Contact() {
                 />
               </div>
 
-              <div className="mt-6 flex items-center gap-4">
-                <MagneticButton
+               <div className="mt-6 flex items-center gap-4">
+                 <MagneticButton
                   type="submit"
                   disabled={status === "submitting"}
                   className="bg-gradient-to-r from-cyber-cyan-dim to-electric-violet-dim text-white"
@@ -205,9 +205,9 @@ export function Contact() {
                     Something went wrong
                   </span>
                 )}
-              </div>
+              </div> 
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

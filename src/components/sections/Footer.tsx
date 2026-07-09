@@ -20,7 +20,7 @@ export function Footer() {
               <span className="gradient-text">FM</span>
               <span className="text-white">.</span>
             </p>
-            <p className="mt-1 text-sm text-muted">{personalInfo.title}</p>
+            {/* <p className="mt-1 text-sm text-muted">{personalInfo.title}</p> */}
           </div>
 
           <div className="flex items-center gap-4">
@@ -42,7 +42,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-glass-border pt-8 md:flex-row">
+        {/* <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-glass-border pt-8 md:flex-row">
           <p className="text-xs text-muted">
             &copy; {currentYear} {personalInfo.name}. All rights reserved.
           </p>
@@ -51,7 +51,7 @@ export function Footer() {
             <Heart className="h-3 w-3 text-electric-violet" />
             using Next.js
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

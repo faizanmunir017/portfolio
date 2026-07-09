@@ -25,10 +25,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div className="order-2 flex flex-col gap-6 lg:order-1">
-          <Badge variant="accent" className="w-fit">
-            Available for opportunities
-          </Badge>
-
+        
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             {personalInfo.name}
           </h1>
@@ -86,7 +83,7 @@ export function Hero() {
             <div className="gradient-border relative overflow-hidden rounded-3xl">
               <div className="relative h-72 w-72 overflow-hidden rounded-3xl bg-obsidian-card sm:h-80 sm:w-80 lg:h-96 lg:w-96">
                 <Image
-                  src="/Cropped_Me.jpg"
+                  src="/profile-placeholder.svg"
                   alt={`${personalInfo.name} - Profile`}
                   fill
                   priority
@@ -95,13 +92,6 @@ export function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent" />
               </div>
-            </div>
-
-            <div className="absolute -top-4 -right-4 rounded-xl glass-strong px-4 py-2 text-xs font-mono text-cyber-cyan">
-              AI / Python / Web Dev
-            </div>
-            <div className="absolute -bottom-4 -left-4 rounded-xl glass-strong px-4 py-2 text-xs font-mono text-electric-violet">
-              Full-Stack
             </div>
           </div>
         </div>
