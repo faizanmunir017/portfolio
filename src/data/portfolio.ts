@@ -46,34 +46,34 @@ export const navLinks: NavLink[] = [
 
 export const experiences: Experience[] = [
   {
-    id: "mergestack",
+    id: "merge-stack",
     company: "MergeStack",
-    role: "Associate Software Engineer",
-    period: "Oct 2024 — May 2024",
+    role: "Software Engineer",
+    period: "Oct 2024 — May 2026",
     location: "Lahore, Pakistan",
     description:
-      "Building production-grade AI full-stack applications with React and FastAPI, specializing in RAG pipelines and intelligent document processing.",
+      "Developed AI-powered full-stack enterprise applications across healthcare, recruitment, regulatory compliance, and finance using modern web technologies and LLM-powered architectures.",
     achievements: [
-      "Delivered 4+ AI full-stack applications using React and FastAPI",
-      "Made use of RAG pipelines with Pinecone, accelerating retrieval by 70% and reducing manual review time",
-      "Architected scalable vector search solutions for enterprise clients",
-      "Implemented end-to-end LLM integration workflows from prototype to production",
+      "Delivered 5+ production-grade AI applications using React, FastAPI, OpenAI, LangChain, Pinecone, and PostgreSQL",
+      "Designed and deployed scalable RAG pipelines with Pinecone vector search, improving semantic retrieval performance by 40%",
+      "Built intelligent workflow automation solutions—including AI voice recruitment, document intelligence, and compliance analysis—that reduced manual review effort by up to 60%",
+      "Engineered end-to-end AI integrations and automation workflows that improved operational efficiency and significantly reduced client response times",
     ],
-    current: true,
+    current: false,
   },
   {
-    id: "a2k",
+    id: "a2k-solutions",
     company: "A2K Solutions",
     role: "Python Intern",
-    period: "Oct 2023 — Dec 2023",
+    period: "Nov 2023 — Dec 2023",
     location: "Lahore, Pakistan",
     description:
-      "Built a strong foundation in Python through hands-on coursework and practical programming exercises, covering core programming concepts and object-oriented programming.",
+      "Completed an intensive Python training program focused on writing clean, maintainable, and object-oriented software while strengthening problem-solving and debugging skills.",
     achievements: [
-      "Completed Harvard's CS50's Introduction to Programming with Python",
-      "Learned Python fundamentals including data types, functions, loops, tuples, dictionaries, file handling, and classes",
-      "Applied object-oriented programming concepts by building a final Python project",
-      "Strengthened problem-solving and debugging skills through practical coding assignments",
+      "Successfully completed Harvard's CS50's Introduction to Programming with Python as part of the internship program",
+      "Developed and debugged 40+ programming exercises and a comprehensive final project across nine structured problem sets",
+      "Applied Python best practices, object-oriented programming, file handling, and modular software design throughout development",
+      "Consistently followed PEP 8 coding standards to produce clean, maintainable, and production-quality Python code",
     ],
     current: false,
   },
@@ -81,19 +81,19 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    id: "gib-foundation",
-    title: "GIB Foundation",
+    id: "regulatory-compliance-analysis-platform",
+    title: "Regulatory Compliance Analysis Platform",
     description:
-      "Regulatory compliance platform leveraging LLMs, FastAPI, React, and Pinecone RAG pipelines to automate complex compliance workflows.",
+"AI-powered regulatory compliance platform that analyzes company policies against international standards using LLMs and RAG pipelines.",
     technologies: ["React", "FastAPI", "Pinecone", "LangChain", "OpenAI"],
-    highlight: "Cut compliance review times from months to 10 minutes",
+    highlight: "Reduced compliance review from months to ~10 minutes",
     featured: true,
   },
   {
-    id: "techtrials",
-    title: "TechTrials Health Care App",
+    id: "ai-healthcare-assistant",
+    title: "AI Healthcare Assistant",
     description:
-      "Full-stack healthcare platform featuring AI voice assistance and diagnosis, with payment processing and patient management for Brazil",
+"Full-stack healthcare platform providing AI consultations, voice support, OCR-powered diagnosis, SOAP note generation, and integrated patient management.",
     technologies: [
       "React",
       "FastAPI",
@@ -101,14 +101,34 @@ export const projects: Project[] = [
       "OpenAI",
       "Stripe",
     ],
-    highlight: "Reduced Doctor's time by 30-50%, with voice assistance, diagnosis, patient speech saved in SOAP notes, proper AI-powered Health bot for Brazil ",
+    highlight: "Reduced administrative workload by ~60% through AI automation",
+    featured: true,
+  },
+
+  {
+    id: "ai-recruitment-agent-platform",
+    title: "AI Recruitment Agent Platform",
+    description:
+"AI recruitment platform with a custom CRM that automates WhatsApp outreach, voice interviews, candidate evaluation, and recruiter workflows.",
+    technologies: [
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "OpenAI",
+      "LangChain",
+      "ElevenLabs",
+      "WhatsApp Business API",
+      "CRM",
+    ],
+    highlight:
+      "Reduced manual candidate screening by ~70% and recruiter involvement during initial interviews by ~80%",
     featured: true,
   },
   {
-    id: "docusearch",
-    title: "DocuSearch AI",
+    id: "document-intelligence-platform",
+    title: "Document Intelligence Platform",
     description:
-      "AI-powered RAG chatbot enabling business owners to query financial statements through natural language, with semantic search over document corpora.",
+  "AI-powered document intelligence platform that allows businesses to chat with annual reports, financial statements, and PDFs using natural language.",
     technologies: [
       "React",
       "TypeScript",
@@ -120,14 +140,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "autograder",
-    title: "HandWritten AutoGrader",
+    id: "handwritten-assignment-grading-system",
+    title: "Handwritten Assignment Grading System",
     description:
-      "Intelligent grading system using OCR and NLP to automate handwritten assignment evaluation across web and mobile platforms.",
+    "Cross-platform grading system that automatically evaluates handwritten assignments using OCR, NLP, and machine learning.",
     technologies: ["Python", "Django", "Kotlin", "OCR", "NLP"],
     highlight: "Reduced manual grading effort by 80%",
     featured: true,
-  },
+  }
+ 
 ];
 
 export const skillCategories: SkillCategory[] = [
@@ -135,12 +156,13 @@ export const skillCategories: SkillCategory[] = [
     id: "languages",
     title: "Languages",
     skills: [
+      "Python",
       "TypeScript",
       "JavaScript",
-      "Python",
       "Kotlin",
       "SQL",
       "HTML/CSS",
+      "AI/ML"
     ],
     icon: "code",
   },
@@ -158,13 +180,14 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "ai-ml",
-    title: "AI / Python / Web Dev",
+    title: "AI / ML",
     skills: [
       "OpenAI API",
       "LangChain",
       "RAG Pipelines",
       "Vector Search",
-      "OCR / NLP",
+      "LangSmith",
+      "Promp Engineering",
       "Hugging Face",
     ],
     icon: "brain",
@@ -184,7 +207,7 @@ export const skillCategories: SkillCategory[] = [
 ];
 
 export const stats = [
-  { label: "AI Apps Delivered", value: "4+" },
+  { label: "AI Apps Delivered", value: "5+" },
   { label: "Modules Built", value: "6+" },
   { label: "Years Experience", value: "1.5+" },
 ];
